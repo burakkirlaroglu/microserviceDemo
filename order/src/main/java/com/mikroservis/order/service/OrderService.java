@@ -21,11 +21,12 @@ public class OrderService  {
         order.setTotal(order.getTotal());
         order.setCreatedAt(LocalDate.now());
         order.setUserId(order.getUserId());
+        orderRepository.save(order);
         return order;
     }
 
     public List<Order> get(UUID userId){
-        return orderRepository.getById(userId);
+        return orderRepository.findByUserId(userId);
     }
 
 

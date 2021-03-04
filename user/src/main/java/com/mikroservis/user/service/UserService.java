@@ -19,11 +19,12 @@ public class UserService {
         user.setId(UUID.randomUUID());
         user.setName(user.getName());
         user.setUserName(user.getUserName());
+        userRepository.save(user);
         return user;
     }
 
     public User get(UUID id){
-        return userRepository.getOne(id);
+        return userRepository.getById(id);
     }
 
 }

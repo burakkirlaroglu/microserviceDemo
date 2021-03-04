@@ -12,5 +12,5 @@ import java.util.UUID;
 public interface OrderServiceClient {
 
     @GetMapping("/api/orders/{userId}")
-    public List<Order> get(@PathVariable UUID userId);
+    List<Order> get(@PathVariable UUID userId);
 }
